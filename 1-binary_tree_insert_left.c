@@ -18,7 +18,10 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	binary_tree_t *tempNode;
 
 	if (new_left == NULL)
+	{
+		fprintf(stderr, "Error: parent is NULL\n");
 		return (NULL);
+	}
 	if (parent == NULL)
 		return (NULL);
 	new_left->n = value;
